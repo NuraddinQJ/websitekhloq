@@ -740,6 +740,31 @@ section {
   }
 }
 
+
+/*--------------------------------------------------------------
+# counters
+--------------------------------------------------------------*/
+.section-counters {
+  text-align: center;
+  margin: 10px;
+
+}
+
+.section-counters .small-title {
+  color: rgb(99, 99, 99);
+  font-size: 16px;
+
+} 
+
+.section-counters .counter {
+  color: rgba(114, 123, 144, 0.644);
+  font-size: 68px;
+  margin: -10px;
+}
+.section-counters .counter-line {
+  margin-bottom: 60px;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/

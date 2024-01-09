@@ -1,10 +1,3 @@
-/**
- * Template Name: Sailor
- * Updated: Sep 18 2023 with Bootstrap v5.3.2
- * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 ;(function () {
   'use strict'
 
@@ -196,4 +189,50 @@
       },
     })
   }
-})()
+  /**
+   * Counter animation script
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter')
+
+    const animateCounter = (counter) => {
+      const target = +counter.getAttribute('data-to')
+      const speed = +counter.getAttribute('data-speed') || 2000 // Default speed is 2000 if not specified
+      const increment = target / speed
+      const appendPlus = counter.hasAttribute('data-plus') // Check if `data-plus` attribute is present
+
+      let currentCount = 0
+
+      const updateCounter = () => {
+        currentCount += increment
+
+        if (currentCount < target) {
+          counter.textContent = Math.ceil(currentCount).toString()
+          setTimeout(updateCounter, 1)
+        } else {
+          counter.textContent = target.toString() + (appendPlus ? '+' : '')
+        }
+      }
+
+      updateCounter()
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target)
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    counters.forEach((counter) => {
+      observer.observe(counter)
+    })
+  })
+
+  // ... (any other code you might want to add in the future)
+})() // End of the self-invoking function
