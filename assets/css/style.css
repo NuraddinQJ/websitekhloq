@@ -744,24 +744,24 @@ section {
 /*--------------------------------------------------------------
 # counters
 --------------------------------------------------------------*/
-.section-counters {
+.counters {
   text-align: center;
   margin: 10px;
 
 }
 
-.section-counters .small-title {
+.counters .small-title {
   color: rgb(103, 103, 103);
   font-size: 16px;
 
 } 
 
-.section-counters .counter {
+.counters .counter {
   color: rgba(114, 123, 144, 0.644);
   font-size: 68px;
   margin: -10px;
 }
-.section-counters .counter-line {
+.counters .counter-line {
   margin-bottom: 60px;
 }
 
