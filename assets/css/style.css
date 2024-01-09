@@ -1295,6 +1295,19 @@ section {
   color: #fff;
 }
 
+.pricing .startfrom {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -48px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: var(--primary-color);
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
@@ -1735,6 +1748,7 @@ section {
 
 .blog .blog-author .social-links {
   margin: 0 10px 10px 0;
+  text-align: left;
 }
 
 .blog .blog-author .social-links a {
@@ -2194,4 +2208,13 @@ section {
 
 #footer .credits a:hover {
   color: white;
+}
+
+.footer-info p {
+  text-align: center;
+}
+@media (min-width: 768px) { /* Adjust 768px as needed */
+  .footer-info p {
+    text-align: right;
+  }
 }
