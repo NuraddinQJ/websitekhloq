@@ -41,9 +41,17 @@
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
+        if (window.location.pathname === '/UAE.html') {
+          // Check if it's page 1
+          selectHeader.classList.add('header-scrolled-uae')
+          selectHeader.classList.remove('header-scrolled')
+        } else {
+          // For all other pages
+          selectHeader.classList.add('header-scrolled')
+          selectHeader.classList.remove('header-scrolled-uae')
+        }
       } else {
-        selectHeader.classList.remove('header-scrolled')
+        selectHeader.classList.remove('header-scrolled', 'header-scrolled-uae')
       }
     }
     window.addEventListener('load', headerScrolled)
