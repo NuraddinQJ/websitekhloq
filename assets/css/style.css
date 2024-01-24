@@ -10,7 +10,9 @@
   --primary-color: #2e2bee; /* Define your color variable */
   --hover-color: #E4181C; /* Define a color for hover state */
   --text-color: #556270;
-  --uae-color : black;
+  --uae-color : green;
+  --uae-color-2 :rgb(0, 0, 0);
+  --turk-color : #ae1f21;
 }
 
 /*--------------------------------------------------------------
@@ -23,7 +25,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--primary-color); 
 }
 
 a:hover {
@@ -146,6 +148,29 @@ h6 {
 #header.header-scrolled-uae .nav-link:hover {
   color: var(--hover-color); /* Color when hovering */
 }
+/*--------------------------------------------------------------
+# Header Turk
+--------------------------------------------------------------*/
+
+#header.header-scrolled-turk {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background: var(--turk-color);
+  padding: 10px 0;
+}
+#header.header-scrolled-turk a,
+#header.header-scrolled-turk .navbar-brand,
+#header.header-scrolled-turk .nav-link,
+#header.header-scrolled-turk .logo a {
+  color: #b3b3b3; /* This sets the text color to white */
+}
+
+/* Hover state for links */
+#header.header-scrolled-turk a:hover,
+#header.header-scrolled-turk .navbar-brand:hover,
+#header.header-scrolled-turk .nav-link:hover {
+  color: wheat; /* Color when hovering */
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -533,6 +558,14 @@ h6 {
   margin-left: 20px;
 }
 
+
+.nav-arabic a :hover{
+  color: white;
+  text-decoration: underline;
+}
+
+/* uae */
+
 .nav-arabic-uae a {
   display: flex;
   align-items: center;
@@ -548,15 +581,33 @@ h6 {
   margin-left: 20px;
 }
 
-.nav-arabic a :hover{
-  color: white;
-  text-decoration: underline;
-}
-
 .nav-arabic-uae a :hover{
   color: white;
   text-decoration: underline;
 }
+
+/* uae */
+
+.nav-arabic-rr a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; /* Larger font size */
+  height: 40px; /* Adjust as necessary */
+  padding: 0 10px; /* Horizontal padding; vertical is handled by flexbox */
+  box-sizing: border-box;
+  background-color: var(--turk-color);
+  color: white;
+  border-radius: 25px; /* Half the height to keep it circular */
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-arabic-rr a :hover{
+  color: white;
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -931,6 +982,7 @@ section {
 
 .about .padding-box {
   padding: 90px; 
+  margin-top: 70px;
   padding-top: 190px; 
   justify-items: center;
   justify-content: center; 
@@ -1717,6 +1769,7 @@ section {
   margin-bottom: 20px;
 }
 
+
 .pricing h4 sup {
   font-size: 20px;
   top: -15px;
@@ -1759,6 +1812,7 @@ section {
   background: #f8f8f8;
   text-align: center;
 }
+
 
 .pricing .btn-buy {
   background: var(--primary-color);
@@ -2577,31 +2631,6 @@ section {
   padding: 20px 0 10px 0;
 }
 
-#footer .footer-top-uae  {
-  background: black;
-  padding: 20px 0 10px 0;
-}
-
-#footer .footer-top-uae .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.401);
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .footer-top-uae .social-links a:hover {
-  background: green;
-  color: #fff;
-  text-decoration: none;
-}
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
@@ -2762,6 +2791,95 @@ section {
 .footer-info p {
   text-align: center;
 }
+
+/* UAE color 
+=====================================*/
+
+#footer .footer-top-uae  {
+  background: var(--uae-color-2);
+  padding: 20px 0 10px 0;
+}
+
+#footer .footer-top-uae .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.401);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top-uae .social-links a:hover {
+  background: green;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Turk color 
+=====================================*/
+
+#footer .footer-top-turk  {
+  background: var(--turk-color);
+  padding: 20px 0 10px 0;
+}
+
+#footer .footer-top-turk .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.401);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top-turk .social-links a:hover {
+  background: rgb(255, 254, 254);
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+
+/* Mal color 
+=====================================*/
+
+#footer .footer-top-mal  {
+  background: rgb(187, 187, 9);
+  padding: 20px 0 10px 0;
+}
+
+#footer .footer-top-mal .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.401);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top-mal .social-links a:hover {
+  background: rgb(255, 254, 254);
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
 @media (min-width: 768px) { /* Adjust 768px as needed */
   .footer-info p {
     text-align: right;

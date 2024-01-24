@@ -41,17 +41,40 @@
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
-        if (window.location.pathname === '/UAE.html') {
+        if (
+          window.location.pathname === '/UAE.html' ||
+          window.location.pathname === '/en/UAE.html'
+        ) {
           // Check if it's page 1
           selectHeader.classList.add('header-scrolled-uae')
-          selectHeader.classList.remove('header-scrolled')
+          selectHeader.classList.remove(
+            'header-scrolled',
+            'header-scrolled-turk'
+          )
+        } else if (
+          window.location.pathname === '/Turkey.html' ||
+          window.location.pathname === '/en/Turkey.html'
+        ) {
+          // Check if it's page 1
+          selectHeader.classList.add('header-scrolled-turk')
+          selectHeader.classList.remove(
+            'header-scrolled',
+            'header-scrolled-uae'
+          )
         } else {
           // For all other pages
           selectHeader.classList.add('header-scrolled')
-          selectHeader.classList.remove('header-scrolled-uae')
+          selectHeader.classList.remove(
+            'header-scrolled-uae',
+            'header-scrolled-turk'
+          )
         }
       } else {
-        selectHeader.classList.remove('header-scrolled', 'header-scrolled-uae')
+        selectHeader.classList.remove(
+          'header-scrolled',
+          'header-scrolled-uae',
+          'header-scrolled-turk'
+        )
       }
     }
     window.addEventListener('load', headerScrolled)
