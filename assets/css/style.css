@@ -13,6 +13,7 @@
   --uae-color : green;
   --uae-color-2 :rgb(0, 0, 0);
   --turk-color : #ae1f21;
+  --apply-color :rgb(151, 151, 151)1;
 }
 
 /*--------------------------------------------------------------
@@ -561,6 +562,30 @@ h6 {
 
 .nav-arabic a :hover{
   color: white;
+  text-decoration: underline;
+}
+
+/* Apply now*/
+
+.nav-apply a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Larger font size */
+  font-weight: bold;
+  height: 40px; /* Adjust as necessary */
+  padding: 0 10px; /* Horizontal padding; vertical is handled by flexbox */
+  box-sizing: border-box;
+  background-color: var(--apply-color);
+  color: rgb(38, 0, 255);
+  border-radius: 25px; /* Half the height to keep it circular */
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+
+.nav-apply a :hover{
+  color: rgb(155, 155, 155);
   text-decoration: underline;
 }
 

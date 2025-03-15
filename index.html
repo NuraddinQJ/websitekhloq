@@ -60,6 +60,7 @@
           <li><a href="portfolio.html">المعرض</a></li>
           <li><a href="pricing.html">التسعير</a></li>
           <li><a href="contact.html">اتصل بنا</a></li>
+          <li class="nav-apply"><a href="Apply.html" class="align-items-center justify-content-center" >قدم الان! </a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -279,7 +280,50 @@
 
       </div> 
     </section> --> <!-- End Clients Section --> 
+
+    <!-- ======= Clients Section =======  -->
+    <section id="clients" class="clients section-bg">
+      <div class="marquee">
+        <div class="marquee-content">
+          <p>We partner with top Russian universities: Moscow State, Kazan Federal, St. Petersburg, and many more...</p>
+        </div>
+      </div>
     
+      <style>
+        @keyframes marquee {
+          from { transform: translateX(100%); }
+          to { transform: translateX(-100%); } /* Moves text fully out of view */
+        }
+    
+        .marquee {
+          width: 100vw; /* Full screen width */
+          height: 200px; /* Enough space for large text */
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+        }
+    
+        .marquee-content {
+          display: inline-block;
+          padding-left: 100vw; /* Ensures it starts offscreen */
+          animation: marquee 55s linear infinite; /* Adjusted speed */
+        }
+    
+        .marquee p {
+          font-size: 150px;
+          font-weight: bold;
+          font-family: Arial, sans-serif;
+          text-transform: uppercase;
+          -webkit-text-stroke: 4px rgb(177, 176, 176);
+          color: transparent;
+          display: inline-block;
+        }
+      </style>
+    </section>
+    
+    
+    <!-- End Clients Section --> 
     <!-- ======= Count Section ======= -->
     
     <section class="counters text-center">
